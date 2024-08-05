@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.post("/post", (req, res) => {
+  res.render("index.ejs");
+  console.log(req.body);
+});
+
 app.listen(port, () => {
   console.log(`${port} 포트에서 서버 실행중`);
 });
