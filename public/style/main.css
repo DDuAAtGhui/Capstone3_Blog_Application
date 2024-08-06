@@ -1,5 +1,13 @@
-.posting
+main {
+}
+
+#title
 {
-    width: 600px;
-    background-color: skyblue;
+    width: 800px;
+}
+
+#content
+{
+    width: 800px;
+    height: 800px;
 }

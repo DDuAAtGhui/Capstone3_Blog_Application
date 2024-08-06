@@ -16,8 +16,9 @@
   </head>
   <body>
     <h1>hello!</h1>
-    <div class="posting"></div>
-    <form action="post" method="POST">
+    <form action="/posting" method="POST">
+      <input type="text" id="title" name="title" required><br>
+      <textarea id="content" name="content" required></textarea><br><br>
       <input type="submit" value="post" />
     </form>
     <script

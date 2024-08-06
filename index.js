@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/post", (req, res) => {
+app.post("/posting", (req, res) => {
   res.render("index.ejs");
   console.log(req.body);
 });
