@@ -10,9 +10,12 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+let posts = [];
 app.post("/posting", (req, res) => {
-  res.render("index.ejs");
-  console.log(req.body);
+  const post = req.body;
+  posts.push(post);
+  res.render("index.ejs", post);
+  console.log(`You pushed ${posts[posts.length - 1]["title"]}`);
 });
 
 app.listen(port, () => {
