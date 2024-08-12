@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "jquery": "^3.7.1",
     "nodemon": "^3.1.4"
   }
 }
