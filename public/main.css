@@ -1,13 +1,22 @@
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
-#title
+.body
 {
-    width: 800px;
+    align-self: center;
 }
 
-#content
+.title
 {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+}
+
+.content
+{
+    min-width: 600px;
+    min-height: 600px;
 }

@@ -1,0 +1,6 @@
+<h1>This is Edit Page</h1>
+<form action="edit/<%=post.id%>" method="POST">
+  <input type="text" class="edit title" name="title" value="<%=post.title %>" /><br /><br />
+  <textarea class="edit content" name="content" ><%=post.content%></textarea><br /><br />
+</form>
+<button>확인</button><button>취소</button>
