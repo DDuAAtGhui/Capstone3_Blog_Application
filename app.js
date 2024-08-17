@@ -56,7 +56,7 @@ app.get(`/edit/:id`, (req, res) => {
 });
 
 app.get("/remove/:id", (req, res) => {
-  // 필터 조건에 일치하는 요소들만을 가진 배열의 얕은 복사(원본 객체와 같은 참조를 공유하는 복사)본 반환
+  // 조건에 맞는 요소들만 포함하는 새로운 배열 반환 (객체들은 원본 배열의 참조를 공유하는 얕은 복사)
   posts = posts.filter((p) => p.id !== parseInt(req.params.id));
   res.redirect("/");
 });

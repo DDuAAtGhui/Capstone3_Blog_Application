@@ -1,22 +1,19 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
-.body
-{
-    align-self: center;
+.body {
+  align-self: center;
 }
 
-.title
-{
-    width: 600px;
+.title {
+  width: 600px;
 }
 
-.content
-{
-    min-width: 600px;
-    min-height: 600px;
+.content {
+  min-width: 600px;
+  min-height: 600px;
 }
