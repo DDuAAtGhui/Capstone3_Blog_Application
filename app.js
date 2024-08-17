@@ -55,7 +55,11 @@ app.get(`/edit/:id`, (req, res) => {
   res.render("edit", { post });
 });
 
-app.get("/remove/:id", (req, res) => {});
+app.get("/remove/:id", (req, res) => {
+  // 필터 조건에 일치하는 요소들만을 가진 배열의 얕은 복사(원본 객체와 같은 참조를 공유하는 복사)본 반환
+  posts = posts.filter((p) => p.id !== parseInt(req.params.id));
+  res.redirect("/");
+});
 
 app.post("/create_post", (req, res) => {
   const { title, content } = req.body;
@@ -73,14 +77,16 @@ app.post("/create_post", (req, res) => {
 });
 
 app.post("/edit/:id", (req, res) => {
-  const post = posts.find((p) => p.id === parseInt(req.params.id));
+  let post = posts.find((p) => p.id === parseInt(req.params.id));
 
   if (!post) return res.status(404).send("Post not found");
 
-  res.redirect("/");
-});
+  // 객체는 참조에 의한 복사니까 posts 배열 안에 있는 게시물 수정 가능
+  post.title = req.body.title;
+  post.content = req.body.content;
 
-app.post("remove/:id", (req, res) => {});
+  res.redirect(`/post/${post.id}`);
+});
 
 app.listen(port, () => {
   console.log(`${port} 포트에서 서버 실행중`);

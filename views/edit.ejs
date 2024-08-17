@@ -1,6 +1,15 @@
 <h1>This is Edit Page</h1>
-<form action="edit/<%=post.id%>" method="POST">
-  <input type="text" class="edit title" name="title" value="<%=post.title %>" /><br /><br />
-  <textarea class="edit content" name="content" ><%=post.content%></textarea><br /><br />
+<form action="/edit/<%=post.id%>" method="POST">
+  <input
+    type="text"
+    class="edit title"
+    name="title"
+    value="<%=post.title %>"
+    required
+  /><br /><br />
+  <textarea class="edit content" name="content" required>
+<%=post.content%></textarea
+  ><br /><br />
+  <input type="submit" name="submit" value="수정" />
 </form>
-<button>확인</button><button>취소</button>
+<a href="/"><button>취소</button></a>
